@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+**<h1> kitt.one | web3</h1>**
+![STANDARDmade-logo](/src/assets/standard-readme.png "STANDARDmade, LLC")
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## <span style="color:#555555"><u> **OVERVIEW** </u></span>
+[kitt.one](https://kitt.one) [`Web3 NFT Minting App`]
+by STANDARDmade, LLC
+- Portfolio & Playground
+  - Web3 Stuff
+  - DevOps Stuff
+  - :taco: Stuff
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## <span style="color:#555555"><u> **POINTS OF CONTACT** </u></span>
+If any issues arise for any of the below mentioned areas, please draft a strongly worded email and never send it to: **kitt@made.llc** 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## <span style="color:#555555"><u> **CORE SOLUTIONS** </u></span>
+| Stack  | Versions |
+| ------------- |:-------------:|
+| React.js | 18.1.0 |
+| Node.js | 16.15.0 |
+| OpenZeppelin | 4.6.0 |
+| Crypto-Browserify | 3.12.0 |
+| Stream | 3.0.0 |
+| Hardhat | 2.9.3 |
+| -etherscan | ^ |
+| -waffle | ^ |
+| MetaMask | 1.2.0 |
+| Solidity | 0.8.4 |
+| Goerli/Sepolia | Test Network |
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## <span style="color:#555555"><u> **CORE DEVELPOMENT** </u></span>
+**kitt.one |** by STANDARDmade, LLC + :taco::taco::taco:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+``` js
+// MINT NFTS [js]
+const oneAddress = "<goerli/sepolia test wallet>";
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+const MainMint = ({ accounts, setAccounts }) => {
+    const [mintAmount, setMintAmount] = useState(1);
+    const isConnected = Boolean(accounts[0]);
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    async function handleMint() {
+        if (window.ethereum) {
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner();
+            const contract = new ethers.Contract(
+               oneAddress,
+               one.abi,
+               signer
+            );
+            try {
+                const response = await contract.mint(BigNumber.from(mintAmount), {
+                    value: ethers.utils.parseEther((0.888 * mintAmount).toString()),
+                })
+                console.log('response: ', response)
+            } catch (err) {
+                console.log('error: ', err)
+            }
+        }
+    }
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    async function connectAccount() {
+        if (window.ethereum) {
+            const accounts = await window.ethereum.request({
+                method: "eth_requestAccounts",
+            })
+            setAccounts(accounts)
+        }
+    }
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    const handleDecrement = () => {
+        if (mintAmount <= 1) return;
+        setMintAmount(mintAmount - 1);
+    }
 
-## Learn More
+    const handleIncrement = () => {
+        if (mintAmount >= 8) return;
+        setMintAmount(mintAmount + 1);
+    }
+};
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### <span style="color:#A6A6A6"> CONTRACT </span>
+Here's my Solidity Contract...read the fine print :wink:
 
-### Code Splitting
+<details>
+  <summary><span style="color:mediumpurple"> CLICK TO EXPAND </span></summary>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+``` js
+pragma solidity ^0.8.4;
 
-### Analyzing the Bundle Size
+import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
+import '@openzeppelin/contracts/access/Ownable.sol';
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+// STANDARDmade.sol SMART Contract
+contract STANDARDmade is ERC721, Ownable {
+	uint256 public mintPrice;
+	uint256 public totalSupply;
+	uint256 public maxSupply;
+	uint256 public maxPerWallet;
+	bool public isPublicMintEnabled;
+	string internal baseTokenUri;
+	address payable public withdrawWallet;
+	mapping(address => uint256) public walletMints;
+	
+	constructor() payable ERC721('STANDARDmade', 'MADE') { 
+		mintPrice = 0.8888 ether;
+		totalSupply = 0;
+		maxSupply = 888;
+		maxPerWallet = 8;
+		// withdrawWallet = kITt Address
+	}	
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+	function setIsPublicMintEnabled(bool isPublicMintEnabled_) external onlyOwner {
+			isPublicMintEnabled = isPublicMintEnabled_;
+	}
+	
+	function setBaseTokenUri(string calldata baseTokenUri_) external onlyOwner {
+		baseTokenUri = baseTokenUri_;
+	}
+	
+	function tokenURI(uint256 tokenId_) public view override returns (string memory) {
+		require(_exists(tokenId_), 'Token does not exist!');
+		return string(abi.encodePacked(baseTokenUri, Strings.toString(tokenId_), ".json"));
+	}
+	
+	function withdraw() external onlyOwner {
+		(bool success, ) = withdrawWallet.call{ value: address(this).balance }('');
+		require(success, 'withdraw failed');
+	}
+	
+	// **MINT**
+	function mint(uint256 quantity_) public payable {
+		require(isPublicMintEnabled, 'minting not enabled');
+		require(msg.value == quantity_ * mintPrice, 'wrong mint value');
+		require(totalSupply + quantity_ <= maxSupply, 'sold out');
+		require(walletMints[msg.sender] + quantity_ <= maxPerWallet, 'exceed max wallet');
+		
+		for (uint256 i = 0; i < quantity_; i++) {
+			uint256 newTokenId = totalSupply + 1;
+			totalSupply++;
+			_safeMint(msg.sender, newTokenId);
+		}
+	}
+}
+```
+:taco::taco::taco:
+</details>

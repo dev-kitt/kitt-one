@@ -1,6 +1,7 @@
 {
   "name": "one",
   "version": "0.1.0",
+  "license": "SEE LICENSE IN STANDARDmade, LLC",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.4.5",

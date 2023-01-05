@@ -49,3 +49,38 @@ body {
   background-attachment: fixed;
   background-position: 40% 40%;
 }
+
+/* ========== MEDIA QUERIES (X-LARGE SCREEN) ========== */ 
+@media screen and (max-width: 1224px) { 
+  .navBar {
+      transform: scale(1);
+      padding-bottom: 2.5rem;
+  } 
+}
+
+/* ========== MEDIA QUERIES (LARGE SCREEN) ========== */
+@media screen and (max-width: 824px) {
+
+}
+
+/* ========== MEDIA QUERIES (MEDIUM SCREEN) ========== */
+@media screen and (max-width: 624px) {
+  .navBar {
+    transform: scale(0.8);
+  }
+  .mainMint {
+    transform: scale(0.7);
+    margin-top: -5rem;
+  }
+}
+
+/* ========== MEDIA QUERIES (SMALL SCREEN) ========== */
+@media screen and (max-width: 424px) {
+  .navBar {
+    transform: scale(0.7);
+  }
+  .mainMint {
+    transform: scale(0.55);
+    margin-top: -10rem;
+  }
+}

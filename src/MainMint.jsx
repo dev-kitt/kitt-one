@@ -49,7 +49,7 @@ const MainMint = ({ accounts, setAccounts }) => {
     }
 
     return (
-        <Flex justify="center" align="center" height="100vh" paddingBottom="100px">
+        <Flex className="mainMint" justify="center" align="center" height="100vh" paddingBottom="100px">
             <Box width="520px">
                 <div>
                     <Text fontSize="18px" textShadow="0 5px #000000">
@@ -59,8 +59,8 @@ const MainMint = ({ accounts, setAccounts }) => {
                         STANDARDmade 
                     </Text>
                     <Text fontSize="28px" letterSpacing="-5.5%" fontFamily="VT323" textShadow="0 2px 2px #000000">
-                        It's 2023. Can STANDARDmade connect to Web3 and mint
-                        a bunch of NFTs? Connect to find out.
+                        It's 2023. Can STANDARDmade connect to a Web3 test wallet
+                        to mint a bunch of digital assets? Give it a try...
                     </Text>
                 </div>
                 {isConnected ? (
@@ -117,7 +117,7 @@ const MainMint = ({ accounts, setAccounts }) => {
                                 marginTop="10px"
                                 onClick={handleMint}
                             >
-                                Mint Now
+                                Test Now
                             </Button>
                         </Flex>
                         <Text
@@ -128,7 +128,7 @@ const MainMint = ({ accounts, setAccounts }) => {
                             textShadow="0 2px 2px #000000"
                             color="var(--color-neon)"
                         >
-                            Connected - Happy Minting!!
+                            Connected - Happy Testing!!
                         </Text>
                     </div>
                 ) : (
@@ -144,7 +144,7 @@ const MainMint = ({ accounts, setAccounts }) => {
                             marginTop="10px"
                             onClick={connectAccount}
                         >
-                            Mint Now
+                            Test Now
                         </Button>
                         <Text
                                 textAlign="center"
@@ -154,7 +154,7 @@ const MainMint = ({ accounts, setAccounts }) => {
                                 textShadow="0 2px 2px #000000"
                                 color="var(--color-neon)"
                             >
-                                You must be connected to Mint.
+                                Connect to MetaMask
                         </Text>
                     </div>
                 )}

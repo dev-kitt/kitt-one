@@ -1,5 +1,6 @@
+import "./App.css"
 import React from "react";
-import { Box, Button, Flex, Image, Link } from '@chakra-ui/react'
+import { Box, Button, Flex, Hide, Image, Link } from '@chakra-ui/react'
 import GitHub from './assets/social-media-icons/github.png'
 import Made from './assets/social-media-icons/made.png'
 import Scratch from './assets/social-media-icons/scratch.png'
@@ -18,7 +19,7 @@ const NavBar = ({ accounts, setAccounts }) => {
     }
 
     return (
-        <Flex justify="space-between" align="center" padding="30px">
+        <Flex className="navBar" justify="space-between" align="center" padding="30px">
             <Flex justify="space-around" width="100%" padding="0 75px">
                 <Link href="https://github.com/standard-made/">
                     <Image src={GitHub} boxSize="54px" margin="0 15px" />
@@ -35,20 +36,23 @@ const NavBar = ({ accounts, setAccounts }) => {
             </Flex>
             
             {/* Connect */}
-            {isConnected ? (
-                <Box margin="0 15px">Connected</Box>
-            ) : (
-                <Button 
-                    backgroundColor="var(--color-primary)"
-                    borderRadius="5px"
-                    boxShadow="0px 2px 2px 1px var(--color-bg)"
-                    color="white"
-                    cursor="pointer"
-                    fontFamily="inherit"
-                    padding="15px"
-                    margin="0 15px"
-                    onClick={connectAccount}>Connect</Button>
-            )}
+            <Hide breakpoint='(max-width: 824px)'>
+                {isConnected ? (
+                    <Box margin="0 15px">Connected</Box>
+                ) : (
+                    <Button 
+                        className="navBar__btn"
+                        backgroundColor="var(--color-primary)"
+                        borderRadius="5px"
+                        boxShadow="0px 2px 2px 1px var(--color-bg)"
+                        color="white"
+                        cursor="pointer"
+                        fontFamily="inherit"
+                        padding="15px"
+                        margin="0 15px"
+                        onClick={connectAccount}>Connect</Button>
+                )}
+            </Hide>
         </Flex>
     )
 }

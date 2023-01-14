@@ -49,18 +49,16 @@ const MainMint = ({ accounts, setAccounts }) => {
     }
 
     return (
-        <Flex className="mainMint" justify="center" align="center" height="100vh" paddingBottom="100px">
+        <Flex className="mainMint" justify="center" align="center" height="88vh" paddingBottom="50px">
             <Box width="520px">
                 <div>
-                    <Text fontSize="18px" textShadow="0 5px #000000">
-                        kitt.one 
-                    </Text>
-                    <Text fontSize="48px" textShadow="0 5px #000000">
-                        STANDARDmade 
-                    </Text>
-                    <Text fontSize="28px" letterSpacing="-5.5%" fontFamily="VT323" textShadow="0 2px 2px #000000">
-                        It's 2023. Can STANDARDmade connect to a Web3 test wallet
-                        to mint a bunch of digital assets? Give it a try...
+                    <img style={{ width: "25%"}}  src={require("./assets/content/[8KIT].png")} alt="kitt.one" />
+                    <Text fontSize="24px" letterSpacing="-5.5%" fontFamily="VT323" textShadow="0 2px 2px #000000">
+                        [ STANDARDmade @0.8888 ETH ]
+                        <br></br>
+                        <br></br>
+                        I'm "Kitt", former Paratrooper, turned Automation Engineer, moonlighting as a 
+                        Developer and Designer. This is my Web3 NFT Minting Test App. Give it a try...                      
                     </Text>
                 </div>
                 {isConnected ? (
@@ -68,7 +66,7 @@ const MainMint = ({ accounts, setAccounts }) => {
                         <Flex align="center" justify="center">
                             <Button 
                                 backgroundColor="var(--color-primary)"
-                                borderRadius="5px"
+                                borderRadius="8px"
                                 boxShadow="0px 2px 2px 1px var(--color-bg)"
                                 cursor="pointer"
                                 fontFamily="inherit"
@@ -93,7 +91,7 @@ const MainMint = ({ accounts, setAccounts }) => {
                             />
                             <Button 
                                 backgroundColor="var(--color-primary)"
-                                borderRadius="5px"
+                                borderRadius="8px"
                                 boxShadow="0px 2px 2px 1px var(--color-bg)"
                                 cursor="pointer"
                                 fontFamily="inherit"
@@ -107,8 +105,8 @@ const MainMint = ({ accounts, setAccounts }) => {
                         </Flex>
                         <Flex align="center" justify="center">
                             <Button 
-                                backgroundColor="var(--color-primary)"
-                                borderRadius="5px"
+                                backgroundColor="var(--color-neon)"
+                                borderRadius="8px"
                                 boxShadow="0px 2px 2px 1px var(--color-bg)"
                                 cursor="pointer"
                                 fontFamily="inherit"
@@ -135,10 +133,12 @@ const MainMint = ({ accounts, setAccounts }) => {
                     <div>
                         <Button 
                             backgroundColor="var(--color-primary)"
-                            borderRadius="5px"
-                            boxShadow="0px 2px 2px 1px var(--color-bg)"
+                            borderRadius="8px"
+                            borderColor="var(--color-light)"
+                            boxShadow="0px 2px 2px 1px var(--color-neon)"
                             cursor="pointer"
                             fontFamily="inherit"
+                            textColor="var(--color-light)"
                             fontWeight="800"
                             padding="15px"
                             marginTop="10px"
@@ -148,13 +148,13 @@ const MainMint = ({ accounts, setAccounts }) => {
                         </Button>
                         <Text
                                 textAlign="center"
-                                fontSize="18px"
+                                fontSize="10px"
                                 letterSpacing="-5.5%"
                                 marginTop="2rem"
                                 textShadow="0 2px 2px #000000"
                                 color="var(--color-neon)"
                             >
-                                Connect to MetaMask
+                                Connect to MetaMask & Goerli Testnet
                         </Text>
                     </div>
                 )}

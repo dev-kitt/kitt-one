@@ -1,5 +1,5 @@
-import "./App.css"
-import { useState } from "react"
+import "./App.css";
+import { useState } from "react";
 import MainMint from './MainMint';
 import NavBar from './NavBar';
 
@@ -11,7 +11,7 @@ function App() {
         <NavBar accounts={accounts} setAccounts={setAccounts} />
         <MainMint accounts={accounts} setAccounts={setAccounts} />
       </div>
-      <div className="moving-bg"></div>
+      <div className="bg"></div>
     </div>
   );
 }

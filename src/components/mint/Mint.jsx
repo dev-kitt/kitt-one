@@ -1,11 +1,15 @@
-import React, { useState } from "react";
-import { ethers, BigNumber } from 'ethers';
-import { Box, Button, Flex, Input, Text } from '@chakra-ui/react'
-import one from './One.json';
+import "../mint/mint.css"
+import React, { useState, useContext } from "react"
+import { ethers, BigNumber } from 'ethers'
+import { Box, Button, Flex, Image, Input, Text } from '@chakra-ui/react'
+import one from '../../One.json'
+import { themeContext } from "../../Context"
 
-const oneAddress = "0x42dcbD726e1965b6c1F7288c2dd5cD526f080a32"; 
+const oneAddress = "0x42dcbD726e1965b6c1F7288c2dd5cD526f080a32"
 
 const MainMint = ({ accounts, setAccounts }) => {
+    const theme = useContext(themeContext)
+    const darkMode = theme.state.darkMode
     const [mintAmount, setMintAmount] = useState(1);
     const isConnected = Boolean(accounts[0]);
 
@@ -52,17 +56,19 @@ const MainMint = ({ accounts, setAccounts }) => {
         <Flex className="mainMint" justify="center" align="center" height="88vh" paddingBottom="50px">
             <Box width="520px">
                 <div>
-                    <img style={{ width: "25%"}}  src={require("./assets/content/[8KIT].png")} alt="kitt.one" />
+                    <Image style={{ width: "25%"}}  src={require("../../assets/content/[8KIT].png")} alt="kitt.one" />
                     <Text fontSize="24px" letterSpacing="-5.5%" fontFamily="VT323" textShadow="0 2px 2px #000000">
-                        [ STANDARDmade @0.8888 ETH ]
-                        <br></br>
-                        <br></br>
+                        <p>
+                            [kitt: Keep IT Testing]
+                        </p>
                         I'm "Kitt", former Paratrooper, turned Automation Engineer, moonlighting as a 
                         Developer and Designer. This is my Web3 NFT Minting Test App. Give it a try...                      
                     </Text>
                 </div>
                 {isConnected ? (
-                    <div>
+                    <div style={{
+                        color: darkMode ? "var(--color-bg)" : "",
+                      }}>
                         <Flex align="center" justify="center">
                             <Button 
                                 backgroundColor="var(--color-primary)"

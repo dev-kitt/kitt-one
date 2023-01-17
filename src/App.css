@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P');
-@import url('https://fonts.googleapis.com/css2?family=VT323');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+@import url("https://fonts.googleapis.com/css?family=VT323");
 
-* {
-  box-sizing: border-box;
+.App{
+  padding: 0.5rem 2.5rem;
+  overflow: hidden; 
+  color: var(--black);   
 }
 
 :root {
@@ -14,20 +16,38 @@
   --color-lurp: #aa64f6;
   --color-light: #ede1f9;
   --color-neon: #50EFBD;
+
+  --transition: all 400ms ease;
+  --container-width: 90%;
 }
 
-html,
-body {
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
   overscroll-behavior: none;
+  background: url("./assets/background/nft-galaxy.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
-  text-align: center;
   font-family: "Press Start 2P", "VT323";
-  color: var(--color-light); 
+  color: white;
+  text-align: center;
+  height: 200vh;
 }
 
 .overlay {
+  opacity: 0.85;
   width: 100%;
   height: 100%;
   z-index: 10;
@@ -36,37 +56,11 @@ body {
   position: fixed;
 }
 
-.bg {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("./assets/background/nft-galaxy.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-}
 
-.mainMint img {
-  transform: scale(1.8);
-  padding: 1rem;
-  margin-bottom: 3rem;
-}
-
-/* ========== MEDIA QUERIES (BREAKPOINT SCREEN) ========== */ 
-@media screen and (max-width: 1555px) { 
- 
-}
 
 /* ========== MEDIA QUERIES (X-LARGE SCREEN) ========== */ 
 @media screen and (max-width: 1224px) { 
-  .navBar {
-      transform: scale(1);
-      padding-bottom: 2.5rem;
-  } 
+
 }
 
 /* ========== MEDIA QUERIES (LARGE SCREEN) ========== */
@@ -76,27 +70,10 @@ body {
 
 /* ========== MEDIA QUERIES (MEDIUM SCREEN) ========== */
 @media screen and (max-width: 624px) {
-  .navBar {
-    transform: scale(0.8);
-  }
-  .mainMint {
-    transform: scale(0.8);
-    margin-top: -5rem;
-  }
 
 }
 
 /* ========== MEDIA QUERIES (SMALL SCREEN) ========== */
 @media screen and (max-width: 424px) {
-  .navBar {
-    transform: scale(0.7);
-  }
-  .mainMint {
-    transform: scale(0.7);
-    margin-top: -5rem;
-  }
-  .mainMint img {
-    transform: scale(2.5);
-    margin-bottom: 55px;
-  }
+
 }

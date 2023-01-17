@@ -1,0 +1,52 @@
+.n-wrapper {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    top: 0;
+    z-index: 0;
+  }
+
+  .n-left {
+    flex: 1;
+    color: var(--color-bg-variant);
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    gap: 2rem;
+  }
+
+.n-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 400;
+  }
+
+/* ========== MEDIA QUERIES (X-LARGE SCREEN) ========== */ 
+@media screen and (max-width: 1224px) { 
+    .navBar {
+        transform: scale(1);
+        padding-bottom: 2.5rem;
+    } 
+  }
+  
+  /* ========== MEDIA QUERIES (LARGE SCREEN) ========== */
+  @media screen and (max-width: 824px) {
+  
+  }
+  
+  /* ========== MEDIA QUERIES (MEDIUM SCREEN) ========== */
+  @media screen and (max-width: 624px) {
+    .navBar {
+      transform: scale(0.8);
+    }
+  }
+  
+  /* ========== MEDIA QUERIES (SMALL SCREEN) ========== */
+  @media screen and (max-width: 424px) {
+    .navBar {
+      transform: scale(0.7);
+    }
+  }

@@ -1,0 +1,36 @@
+.mainMint img {
+    transform: scale(1.8);
+    padding: 1rem;
+    margin-bottom: 3rem;
+  }
+
+/* ========== MEDIA QUERIES (X-LARGE SCREEN) ========== */ 
+@media screen and (max-width: 1224px) { 
+
+  }
+  
+  /* ========== MEDIA QUERIES (LARGE SCREEN) ========== */
+  @media screen and (max-width: 824px) {
+  
+  }
+  
+  /* ========== MEDIA QUERIES (MEDIUM SCREEN) ========== */
+  @media screen and (max-width: 624px) {
+    .mainMint {
+      transform: scale(0.8);
+      margin-top: -5rem;
+    }
+  
+  }
+  
+  /* ========== MEDIA QUERIES (SMALL SCREEN) ========== */
+  @media screen and (max-width: 424px) {
+    .mainMint {
+      transform: scale(0.7);
+      margin-top: -5rem;
+    }
+    .mainMint img {
+      transform: scale(2.5);
+      margin-bottom: 55px;
+    }
+  }

@@ -5,7 +5,7 @@ import GitHub from '../../assets/social-media-icons/github.png'
 import Made from '../../assets/social-media-icons/made.png'
 import Scratch from '../../assets/social-media-icons/scratch.png'
 import LinkedIn from '../../assets/social-media-icons/linkedin.png'
-import Kitt from "../../assets/kitt_one.png"
+import Kitt from "../../assets/kitt-one.png"
 
 const NavBar = ({ accounts, setAccounts }) => {
     const isConnected = Boolean(accounts[0])
@@ -23,7 +23,7 @@ const NavBar = ({ accounts, setAccounts }) => {
         <Flex className="n-wrapper" id="home">
             {/* left */}
             <Flex id="top" className="n-left">
-                <Image src={Kitt} boxSize="62px" width="80px" height="80px" />
+                <Image src={Kitt} boxSize="100px" width="100px" height="100px" />
                 <Link href="https://github.com/standard-made/">
                     <Image src={GitHub} boxSize="42px" margin="0 15px" />
                 </Link>
@@ -41,6 +41,7 @@ const NavBar = ({ accounts, setAccounts }) => {
             
             {/* right */}
             <Flex className="n-right">
+                
                 {/* Connect */} 
                 <Hide breakpoint='(max-width: 824px)'>
                     {isConnected ? (

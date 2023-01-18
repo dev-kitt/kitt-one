@@ -63,13 +63,13 @@ const MainMint = ({ accounts, setAccounts }) => {
                         </Text>
                         <Box fontFamily="VT323" fontSize="15px">
                             <Text textAlign="left" fontFamily="VT323">
-                                kitt.test-log> ... consuming tacos 🌮🌮🌮  
+                                kitt.test-log{'>'} ... consume tacos 🌮🌮🌮  
                             </Text>
                             <Text textAlign="left">
-                                kitt.test-log> ... test Solidity smart contracts on the Etherum blockchain w/MetaMask 
+                                kitt.test-log{'>'} ... test Solidity smart contracts on the Etherum blockchain w/MetaMask 
                             </Text>
                             <Text textAlign="left">
-                                kitt.test-log> ... connect to Goerli Testnet and insert 🌮
+                                kitt.test-log{'>'} ... connect to Goerli Testnet and comsume more tacos 🌮🌮🌮
                             </Text>
                         </Box>
                     </Text>

@@ -4,7 +4,7 @@
     border: 3px solid var(--color-primary);
     border-radius: 1rem;
     position: relative;
-    padding: 3px;
+    padding: 2px;
     cursor: pointer;
 }
 
@@ -32,9 +32,7 @@
 
 /* ========== MEDIA QUERIES (MEDIUM SCREEN) ========== */
 @media screen and (max-width: 624px) {
-    .toggle {
-        right: 2rem;
-    }
+
 }
 
 /* ========== MEDIA QUERIES (SMALL SCREEN) ========== */

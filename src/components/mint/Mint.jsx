@@ -1,15 +1,13 @@
 import "../mint/mint.css"
-import React, { useState, useContext } from "react"
+import React, { useState } from "react"
 import { ethers, BigNumber } from 'ethers'
 import { Box, Button, Flex, Image, Input, Text } from '@chakra-ui/react'
 import one from '../../One.json'
-import { themeContext } from "../../Context"
+import Toggle from "../toggle/Toggle"
 
 const oneAddress = "0x42dcbD726e1965b6c1F7288c2dd5cD526f080a32"
 
 const MainMint = ({ accounts, setAccounts }) => {
-    const theme = useContext(themeContext)
-    const darkMode = theme.state.darkMode
     const [mintAmount, setMintAmount] = useState(1);
     const isConnected = Boolean(accounts[0]);
 
@@ -54,21 +52,34 @@ const MainMint = ({ accounts, setAccounts }) => {
 
     return (
         <Flex className="mainMint" justify="center" align="center" height="88vh" paddingBottom="50px">
-            <Box width="520px">
-                <div>
+            <Box width="550px">
+                <Flex align="center" justify="center">
                     <Image style={{ width: "25%"}}  src={require("../../assets/content/[8KIT].png")} alt="kitt.one" />
-                    <Text fontSize="24px" letterSpacing="-5.5%" fontFamily="VT323" textShadow="0 2px 2px #000000">
-                        <p>
-                            [kitt: Keep IT Testing]
-                        </p>
-                        I'm "Kitt", former Paratrooper, turned Automation Engineer, moonlighting as a 
-                        Developer and Designer. This is my Web3 NFT Minting Test App. Give it a try...                      
+                </Flex>
+                <Flex align="center" justify="center">
+                    <Text letterSpacing="-5.5%" textShadow="0 2px 2px #000000">
+                        <Text fontSize="12px" fontFamily="Press Start 2P">
+                            KITT: Keep IT Testing
+                        </Text>
+                        <Box fontFamily="VT323" fontSize="15px">
+                            <Text textAlign="left" fontFamily="VT323">
+                                kitt.test-log> ... consuming tacos 🌮🌮🌮  
+                            </Text>
+                            <Text textAlign="left">
+                                kitt.test-log> ... test Solidity smart contracts on the Etherum blockchain w/MetaMask 
+                            </Text>
+                            <Text textAlign="left">
+                                kitt.test-log> ... connect to Goerli Testnet and insert 🌮
+                            </Text>
+                        </Box>
                     </Text>
-                </div>
+                </Flex>
+                <Flex align="center" justify="center">
+                    <Toggle />
+                </Flex>
+
                 {isConnected ? (
-                    <div style={{
-                        color: darkMode ? "var(--color-bg)" : "",
-                      }}>
+                    <div>
                         <Flex align="center" justify="center">
                             <Button 
                                 backgroundColor="var(--color-primary)"
@@ -160,7 +171,7 @@ const MainMint = ({ accounts, setAccounts }) => {
                                 textShadow="0 2px 2px #000000"
                                 color="var(--color-neon)"
                             >
-                                Connect to MetaMask & Goerli Testnet
+                                Connect to MetaMask
                         </Text>
                     </div>
                 )}

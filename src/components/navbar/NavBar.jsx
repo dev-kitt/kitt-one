@@ -6,7 +6,6 @@ import Made from '../../assets/social-media-icons/made.png'
 import Scratch from '../../assets/social-media-icons/scratch.png'
 import LinkedIn from '../../assets/social-media-icons/linkedin.png'
 import Kitt from "../../assets/kitt_one.png"
-import Toggle from "../toggle/Toggle"
 
 const NavBar = ({ accounts, setAccounts }) => {
     const isConnected = Boolean(accounts[0])
@@ -24,12 +23,7 @@ const NavBar = ({ accounts, setAccounts }) => {
         <Flex className="n-wrapper" id="home">
             {/* left */}
             <Flex id="top" className="n-left">
-                <Image src={Kitt} boxSize="62px" margin="0 15px" />
-                <Toggle />                
-            </Flex>
-            
-            {/* right */}
-            <Flex className="n-right">
+                <Image src={Kitt} boxSize="62px" width="80px" height="80px" />
                 <Link href="https://github.com/standard-made/">
                     <Image src={GitHub} boxSize="42px" margin="0 15px" />
                 </Link>
@@ -42,7 +36,12 @@ const NavBar = ({ accounts, setAccounts }) => {
                 <Link href="https://www.linkedin.com/in/qakit/">
                     <Image src={LinkedIn} boxSize="42px" margin="0 15px" />
                 </Link>               
-                {/* Connect */}
+                
+            </Flex>
+            
+            {/* right */}
+            <Flex className="n-right">
+                {/* Connect */} 
                 <Hide breakpoint='(max-width: 824px)'>
                     {isConnected ? (
                         <Box margin="0 15px">Connected</Box>

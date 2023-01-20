@@ -129,7 +129,7 @@ function App() {
           parallaxData={[
             {
               start: 0,
-              end: 999,
+              end: 801,
               properties: [
                 {
                   startValue: 0,

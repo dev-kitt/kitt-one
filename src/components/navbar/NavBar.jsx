@@ -23,18 +23,18 @@ const NavBar = ({ accounts, setAccounts }) => {
         <Flex className="n-wrapper" id="home">
             {/* left */}
             <Flex id="top" className="n-left">
-                <Image src={Kitt} boxSize="100px" width="100px" height="100px" />
+                <Image src={Kitt} boxSize="100px" width="100px" height="100px" title="kitt" />
                 <Link href="https://github.com/standard-made/">
-                    <Image src={GitHub} boxSize="42px" margin="0 15px" />
+                    <Image src={GitHub} boxSize="42px" margin="0 15px" title="github" />
                 </Link>
                 <Link href="https://made.llc/">
-                    <Image src={Made} boxSize="42px" margin="0 15px" />
+                    <Image src={Made} boxSize="42px" margin="0 15px" title="standard made" />
                 </Link>
                 <Link href="https://scratch.mit.edu/projects/385458190/">
-                    <Image src={Scratch} boxSize="42px" margin="0 15px" />
+                    <Image src={Scratch} boxSize="42px" margin="0 15px" title="stale tacos" />
                 </Link>
                 <Link href="https://www.linkedin.com/in/qakit/">
-                    <Image src={LinkedIn} boxSize="42px" margin="0 15px" />
+                    <Image src={LinkedIn} boxSize="42px" margin="0 15px" title="linkedin" />
                 </Link>               
                 
             </Flex>

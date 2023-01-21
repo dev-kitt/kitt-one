@@ -1,5 +1,5 @@
 **<h1> kitt.one | web3</h1>**
-![kitt-made-logo](/src/assets/kitt-readme.png "Made, LLC")
+![kitt-made-logo](/src/assets/kittone_readme.png "Made, LLC")
 
 
 

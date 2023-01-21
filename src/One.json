@@ -1,7 +1,7 @@
 {
     "_format": "hh-sol-artifact-1",
-    "contractName": "STANDARDmade",
-    "sourceName": "contracts/STANDARDmade.sol",
+    "contractName": "Made",
+    "sourceName": "contracts/Made.sol",
     "abi": [
       {
         "inputs": [],

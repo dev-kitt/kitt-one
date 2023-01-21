@@ -14,6 +14,7 @@
     "@testing-library/user-event": "^14.4.3",
     "ethers": "^5.7.2",
     "framer-motion": "^8.0.2",
+    "hardhat-deploy": "^0.11.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-plx": "^2.0.1",
@@ -46,6 +47,6 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.3",
-    "hardhat": "^2.12.4"
+    "hardhat": "^2.12.6"
   }
 }

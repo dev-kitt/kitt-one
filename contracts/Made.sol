@@ -5,8 +5,8 @@ pragma solidity ^0.8.4;
 import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 
-// STANDARDmade.sol SMART Contract
-contract STANDARDmade is ERC721, Ownable {
+// Made.sol SMART Contract
+contract Made is ERC721, Ownable {
 	uint256 public mintPrice;
 	uint256 public totalSupply;
 	uint256 public maxSupply;
@@ -16,7 +16,7 @@ contract STANDARDmade is ERC721, Ownable {
 	address payable public withdrawWallet;
 	mapping(address => uint256) public walletMints;
 	
-	constructor() payable ERC721('STANDARDmade', 'MADE') { 
+	constructor() payable ERC721('Made', 'MADE') { 
 		mintPrice = 0.8888 ether;
 		totalSupply = 0;
 		maxSupply = 888;

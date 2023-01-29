@@ -171,7 +171,7 @@ const MainMint = ({ accounts, setAccounts }) => {
                                 textShadow="0 2px 2px #000000"
                                 color="var(--color-neon)"
                             >
-                                Connect to MetaMask
+                                Install MetaMask to Connect
                         </Text>
                     </div>
                 )}

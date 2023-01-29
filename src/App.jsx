@@ -39,13 +39,13 @@ function App() {
             left: 0,
             top: 0,
             width: "100%",
-            zIndex: 100
+            zIndex: 10
           }}
         >
           <img style={{ width: "100%" }} src={require("./assets/background/mist-kitt.png")} alt="foreground" />
         </Plx>
       </Hide>
-      <Plx
+      <Plx className="logo"
         parallaxData={[
           {
             start: 0,
@@ -74,7 +74,7 @@ function App() {
           alt="standard"
         />
       </Plx>
-      <Plx
+      <Plx className="logo"
         parallaxData={[
           {
             start: 0,
@@ -110,16 +110,16 @@ function App() {
           style={{
             width: "45vw"
           }}
-          src={require("./assets/background/made-kitt.png")}
+          src={require("./assets/background/made-kitt-scroll.png")}
           alt="made"
         />
       </Plx>
       <div
         style={{
           position: "fixed",
-          lefft: 0,
+          left: 0,
           top: 0,
-          zIndex: 200,
+          zIndex: 20,
           paddingTop: "56%",
           height: "400vh",
           width: "100%"
@@ -129,7 +129,7 @@ function App() {
           parallaxData={[
             {
               start: 0,
-              end: 801,
+              end: 800,
               properties: [
                 {
                   startValue: 0,
@@ -145,7 +145,7 @@ function App() {
             top: 0,
             left: 0,
             position: "fixed",
-            zIndex: 100
+            zIndex: 0
           }}
         >
         <div>

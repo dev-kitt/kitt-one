@@ -49,7 +49,7 @@ function App() {
         parallaxData={[
           {
             start: 0,
-            end: 80,
+            end: 60,
             properties: [
               {
                 startValue: 1,
@@ -78,7 +78,7 @@ function App() {
         parallaxData={[
           {
             start: 0,
-            end: 100,
+            end: 80,
             properties: [
               {
                 startValue: 1,
@@ -129,7 +129,7 @@ function App() {
           parallaxData={[
             {
               start: 0,
-              end: 100,
+              end: 80,
               properties: [
                 {
                   startValue: 0,

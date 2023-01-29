@@ -23,7 +23,7 @@ function App() {
           parallaxData={[
             {
               start: 0,
-              end: 400,
+              end: 40,
               easing: "ease-in",
               properties: [
                 {
@@ -49,7 +49,7 @@ function App() {
         parallaxData={[
           {
             start: 0,
-            end: 600,
+            end: 80,
             properties: [
               {
                 startValue: 1,
@@ -78,7 +78,7 @@ function App() {
         parallaxData={[
           {
             start: 0,
-            end: 800,
+            end: 100,
             properties: [
               {
                 startValue: 1,
@@ -88,8 +88,8 @@ function App() {
             ]
           },
           {
-            start: 400,
-            end: 799,
+            start: 40,
+            end: 79,
             properties: [
               {
                 startValue: 1,
@@ -129,7 +129,7 @@ function App() {
           parallaxData={[
             {
               start: 0,
-              end: 800,
+              end: 100,
               properties: [
                 {
                   startValue: 0,

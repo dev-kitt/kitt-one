@@ -54,12 +54,12 @@ const MainMint = ({ accounts, setAccounts }) => {
         <Flex className="mainMint" justify="center" align="center" height="88vh" paddingBottom="50px">
             <Box width="550px">
                 <Flex align="center" justify="center">
-                    <Image style={{ width: "25%"}}  src={require("../../assets/pixel-kitt.png")} alt="kitt.one" />
+                    <Image style={{ width: "25%"}}  src={require("../../assets/kitt1.png")} alt="kitt.one" />
                 </Flex>
                 <Flex align="center" justify="center">
                     <Text letterSpacing="-5.5%" textShadow="0 2px 2px #000000">
                         <Text fontSize="12px" fontFamily="Press Start 2P">
-                            KITT: Keep IT Testing
+                            KITT: Keep IT Thriving
                         </Text>
                         <Box fontFamily="VT323" fontSize="15px">
                             <Text textAlign="left" fontFamily="VT323">

@@ -1,10 +1,10 @@
 import "../navbar/navbar.css"
 import React from "react"
 import { Box, Button, Flex, Hide, Image, Link } from '@chakra-ui/react'
-import GitHub from '../../assets/social-media-icons/github.png'
-import Made from '../../assets/social-media-icons/made.png'
-import Scratch from '../../assets/social-media-icons/scratch.png'
-import LinkedIn from '../../assets/social-media-icons/linkedin.png'
+import Made from '../../assets/social-media-icons/kitt-made.png'
+import Plus from '../../assets/social-media-icons/kitt-plus.png'
+import Pro from '../../assets/social-media-icons/kitt-pro.png'
+import Games from '../../assets/social-media-icons/kitt-games.png'
 import Kitt from "../../assets/kitt-one.png"
 
 const NavBar = ({ accounts, setAccounts }) => {
@@ -23,18 +23,18 @@ const NavBar = ({ accounts, setAccounts }) => {
         <Flex className="n-wrapper" id="home">
             {/* left */}
             <Flex id="top" className="n-left">
-                <Image src={Kitt} boxSize="100px" width="100px" height="100px" title="kitt" />
-                <Link href="https://github.com/standard-made/">
-                    <Image src={GitHub} boxSize="42px" margin="0 15px" title="github" />
+                <Image src={Kitt} boxSize="100px" width="100px" height="100px" title="Kitt.One" />
+                <Link href="https://made.llc">
+                    <Image src={Made} boxSize="42px" margin="0 15px" title="Made.LLC" />
                 </Link>
-                <Link href="https://made.llc/">
-                    <Image src={Made} boxSize="42px" margin="0 15px" title="standard made" />
+                <Link href="https://kitt.plus">
+                    <Image src={Plus} boxSize="42px" margin="0 15px" title="Kitt.Plus" />
                 </Link>
-                <Link href="https://scratch.mit.edu/projects/385458190/">
-                    <Image src={Scratch} boxSize="42px" margin="0 15px" title="stale tacos" />
+                <Link href="https://kitt.pro">
+                    <Image src={Pro} boxSize="42px" margin="0 15px" title="Kitt.Pro" />
                 </Link>
-                <Link href="https://www.linkedin.com/in/qakit/">
-                    <Image src={LinkedIn} boxSize="42px" margin="0 15px" title="linkedin" />
+                <Link href="https://kitt.games">
+                    <Image src={Games} boxSize="42px" margin="0 15px" title="Kitt.Games" />
                 </Link>               
                 
             </Flex>

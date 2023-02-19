@@ -3,8 +3,9 @@ import React from "react"
 import { Box, Button, Flex, Hide, Image, Link } from '@chakra-ui/react'
 import Made from '../../assets/social-media-icons/kitt-made.png'
 import Plus from '../../assets/social-media-icons/kitt-plus.png'
-import Pro from '../../assets/social-media-icons/kitt-pro.png'
-import Games from '../../assets/social-media-icons/kitt-games.png'
+import Hub from '../../assets/social-media-icons/kitt-hub.png'
+// import Pro from '../../assets/social-media-icons/kitt-pro.png'
+// import Games from '../../assets/social-media-icons/kitt-games.png'
 import Kitt from "../../assets/kitt-one.png"
 
 const NavBar = ({ accounts, setAccounts }) => {
@@ -30,13 +31,15 @@ const NavBar = ({ accounts, setAccounts }) => {
                 <Link href="https://kitt.plus">
                     <Image src={Plus} boxSize="42px" margin="0 15px" title="Kitt.Plus" />
                 </Link>
-                <Link href="https://kitt.pro">
+                <Link href="https://github.com/standard-made"> 
+                    <Image src={Hub} boxSize="42px" margin="0 15px" title="KittHub.Com" />
+                </Link>
+                {/* <Link href="https://kitt.pro">
                     <Image src={Pro} boxSize="42px" margin="0 15px" title="Kitt.Pro" />
                 </Link>
                 <Link href="https://kitt.games">
                     <Image src={Games} boxSize="42px" margin="0 15px" title="Kitt.Games" />
-                </Link>               
-                
+                </Link>                */}             
             </Flex>
             
             {/* right */}

@@ -1,7 +1,7 @@
 import "../navbar/navbar.css"
 import React from "react"
 import { Box, Button, Flex, Hide, Image, Link } from '@chakra-ui/react'
-import Made from '../../assets/social-media-icons/kitt-made.png'
+import LLC from '../../assets/social-media-icons/kitt-made.png'
 import Plus from '../../assets/social-media-icons/kitt-plus.png'
 import Hub from '../../assets/social-media-icons/kitt-hub.png'
 // import Pro from '../../assets/social-media-icons/kitt-pro.png'
@@ -25,8 +25,8 @@ const NavBar = ({ accounts, setAccounts }) => {
             {/* left */}
             <Flex id="top" className="n-left">
                 <Image src={Kitt} boxSize="100px" width="100px" height="100px" title="Kitt.One" />
-                <Link href="https://made.llc">
-                    <Image src={Made} boxSize="42px" margin="0 15px" title="Made.LLC" />
+                <Link href="https://kitt.llc">
+                    <Image src={LLC} boxSize="42px" margin="0 15px" title="Kitt.LLC" />
                 </Link>
                 <Link href="https://kitt.plus">
                     <Image src={Plus} boxSize="42px" margin="0 15px" title="Kitt.Plus" />

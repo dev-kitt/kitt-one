@@ -1,11 +1,11 @@
 **<h1> kitt.one | web3</h1>**
-![kitt-made-logo](/src/assets/kittone_readme.png "Made, LLC")
+![kitt-made-logo](/src/assets/kittone_readme.png "Kitt, LLC")
 
 
 
 ## <span style="color:#555555"><u> **OVERVIEW** </u></span>
 [kitt.one](https://kitt.one) [`Web3 NFT Minting App`]
-by Made, LLC
+by Kitt, LLC
 - Portfolio & Playground
   - Web3 Stuff
   - DevOps Stuff
@@ -35,7 +35,7 @@ If any issues arise for any of the below mentioned areas, please draft a strongl
 
 
 ## <span style="color:#555555"><u> **CORE DEVELPOMENT** </u></span>
-**kitt.one |** by Made, LLC + :taco::taco::taco:
+**kitt.one |** by Kitt, LLC + :taco::taco::taco:
 
 
 ``` js

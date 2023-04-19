@@ -59,7 +59,7 @@ const MainMint = ({ accounts, setAccounts }) => {
                 <Flex align="center" justify="center">
                     <Text letterSpacing="-5.5%" textShadow="0 2px 2px #000000">
                         <Text fontSize="12px" fontFamily="Press Start 2P">
-                            KITT: Keep IT Thriving
+                            KITT: Keep IT Together
                         </Text>
                         <Box fontFamily="VT323" fontSize="15px">
                             <Text textAlign="left" fontFamily="VT323">

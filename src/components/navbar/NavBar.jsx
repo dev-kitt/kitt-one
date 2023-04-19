@@ -24,7 +24,7 @@ const NavBar = ({ accounts, setAccounts }) => {
         <Flex className="n-wrapper" id="home">
             {/* left */}
             <Flex id="top" className="n-left">
-                <Image src={Kitt} boxSize="100px" width="100px" height="100px" title="Kitt.One" />
+                <Image src={Kitt} boxSize="100px" width="169px" height="42px" title="Kitt.One" marginRight="15px" />
                 <Link href="https://kitt.llc">
                     <Image src={LLC} boxSize="42px" margin="0 15px" title="Kitt.LLC" />
                 </Link>
